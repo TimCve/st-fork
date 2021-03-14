@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Inconsolata:pixelsize=18:antialias=true:autohint=true";
+static char *font = "Inconsolata:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -95,33 +95,31 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#1d1f21",
-	"#cc342b",
-	"#198844",
-	"#fba922",
-	"#3971ed",
-	"#a36ac7",
-	"#3971ed",
-	"#c5c8c6",
 
-	/* 8 bright colors */
-	"#969896",
-	"#cc342b",
-	"#198844",
-	"#fba922",
-	"#3971ed",
-	"#a36ac7",
-	"#3971ed",
-	"#ffffff",
+  /* 8 normal colors */
+  [0] = "#48483e", /* black   */
+  [1] = "#dc2566", /* red     */
+  [2] = "#8fc029", /* green   */
+  [3] = "#d4c96e", /* yellow  */
+  [4] = "#55bcce", /* blue    */
+  [5] = "#9358fe", /* magenta */
+  [6] = "#56b7a5", /* cyan    */
+  [7] = "#acada1", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+  [8]  = "#76715e", /* black   */
+  [9]  = "#fa2772", /* red     */
+  [10] = "#a7e22e", /* green   */
+  [11] = "#e7db75", /* yellow  */
+  [12] = "#66d9ee", /* blue    */
+  [13] = "#ae82ff", /* magenta */
+  [14] = "#66efd5", /* cyan    */
+  [15] = "#cfd0c2", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#0d0f11",
-	"#c5c8c6",
+  /* special colors */
+  [256] = "#272822", /* background */
+  [257] = "#f1ebeb", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
